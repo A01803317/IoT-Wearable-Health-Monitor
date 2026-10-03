@@ -48,7 +48,7 @@ Sensores → ESP32 → Wi-Fi/MQTT → Broker MQTT → Base de datos → Dashboar
 
 ## Estado actual
 
-El proyecto se encuentra en fase de diseño y selección de componentes. Las siguientes etapas contemplan la integración de sensores, la programación del ESP32, el almacenamiento de datos y el desarrollo del dashboard.
+El proyecto se encuentra en fase de diseño y selección de componentes. Las siguientes etapas incluyen la integración de sensores, la programación del ESP32, el almacenamiento de datos y el desarrollo del dashboard.
 
 ## Integrantes
 
