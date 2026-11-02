@@ -48,7 +48,14 @@ Sensores → ESP32 → Wi-Fi/MQTT → Broker MQTT → Base de datos → Dashboar
 
 ## Estado actual
 
-El proyecto se encuentra en fase de diseño y selección de componentes. Las siguientes etapas incluyen la integración de sensores, la programación del ESP32, el almacenamiento de datos y el desarrollo del dashboard.
+El proyecto se encuentra en fase de diseño y selección de componentes. Las siguientes etapas incluyen la integración de sensores, la programación del ESP32, el almacenamiento de datos y el desarrollo del dashboard. 
+Actualización: Etapa (02/11/26) 
+Se hizo:
+1.-Montaje físico y pruebas de lectura
+2.-Análisis de señal
+3.-Conexion a Wi-fi
+4.-Justificación de Wi-fi
+5.-Preguntas de reflexión
 
 ## Integrantes
 
@@ -57,12 +64,12 @@ El proyecto se encuentra en fase de diseño y selección de componentes. Las sig
 
 ## Etapa 2:
 
-1.Monteja fisico y pruebas de lectura: Se conectaron los sensores al ESP32 en la protoboar. Se programo un sketch que lee los valores y los imprime en el monitor serial.
+1.Montaje físico y pruebas de lectura: Se conectaron los sensores al ESP32 en la protoboard. Se programó un sketch que lee los valores y los imprime en el monitor serial.
 
-2.Analisis de señal:Se observo que el sensor MAX30102 presenta "ruido" debido al movimiento del dedo, la presion ejercida o la luz externa. Se concluyo que se necesita una posicion estable de dedo para lecuras confiables.
+2.Análisis de señal:Se observó que el sensor MAX30102 presenta "ruido" debido al movimiento del dedo, la presión ejercida o la luz externa. Se concluyó que se necesita una posición estable de dedo para lecturas confiables.
 
-3.Conexion a Wi-fi: Se configuro el ESP32 para conectarse a una red local. Se obtuvo una direccion IP y se valido la conexion mediante una peticion HTTP exitosa.
+3.Conexión a Wi-fi: Se configuró el ESP32 para conectarse a una red local. Se obtuvo una dirección IP y se validó la conexión mediante una petición HTTP exitosa.
 
-4.Justificación de Wi-fi: Se argumento que se elige Wi-fi sobre Bluetoth porque permite una conexion directa a la red local y facilita el envio de datos a un servidor(broker) mediante protocolos como HTTP o MQTT, ideal para integrarse con baes de datos web.
+4.Justificación de Wi-fi: Se argumentó que se elige Wi-fi sobre Bluetooth porque permite una conexión directa a la red local y facilita el envío de datos a un servidor(broker) mediante protocolos como HTTP o MQTT, ideal para integrarse con bases de datos web.
 
-5.Preguntas de reflexion: Se respondieron preguntas clave sobre por qué el MAX30102 requiere de dos longitudes de onda(roja e infrarrojo) para medir el SpO2, y se propusieron actuadores alternativos para personas con discapacidad(guantes con vibración, lues estroboscopicas o pulsaciones eléctricas suaves).
+5.Preguntas de reflexión: Se respondieron preguntas clave sobre por qué el MAX30102 requiere de dos longitudes de onda(roja e infrarrojo) para medir el SpO2, y se propusieron actuadores alternativos para personas con discapacidad(guantes con vibración, luces estroboscópicas o pulsaciones eléctricas suaves).
