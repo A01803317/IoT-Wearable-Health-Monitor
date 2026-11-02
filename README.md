@@ -55,7 +55,7 @@ El proyecto se encuentra en fase de diseño y selección de componentes. Las sig
 - Julian Cruz Valdez A01803317
 - Abraham Alexander Velasco Gallo A01749765
 
-##Etapa 2:
+## Etapa 2:
 
 1.Monteja fisico y pruebas de lectura: Se conectaron los sensores al ESP32 en la protoboar. Se programo un sketch que lee los valores y los imprime en el monitor serial.
 
