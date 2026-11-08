@@ -73,3 +73,25 @@ Se hizo:
 4.Justificación de Wi-fi: Se argumentó que se elige Wi-fi sobre Bluetooth porque permite una conexión directa a la red local y facilita el envío de datos a un servidor(broker) mediante protocolos como HTTP o MQTT, ideal para integrarse con bases de datos web.
 
 5.Preguntas de reflexión: Se respondieron preguntas clave sobre por qué el MAX30102 requiere de dos longitudes de onda(roja e infrarrojo) para medir el SpO2, y se propusieron actuadores alternativos para personas con discapacidad(guantes con vibración, luces estroboscópicas o pulsaciones eléctricas suaves).
+
+## Etapa 3:
+La Etapa 3 se enfocó en la estructuración de datos y la comunicación del dispositivo utilizando un microcontrolador ESP32 junto con los sensores MLX90614(temperatura), MAX30102(oximetría/pulso), MPU6050(aceleración).
+
+1.Diseño y documentación del esquema de datos (Parte 1):
+
+a)Definición de variables: Se creó una tabla formal documentando 10 variables clave para el monitoreo del adulto mayor. Se especificó el nombre de cada campo (ej.: temp_amb_c), su unidad de medida, el tipo de dato y su rango esperado.
+
+b)Payload JSON: Se estableció el uso de un formato JSON plano para organizar las lecturas, facilitando su envío y lectura. Se documentó el uso de la librería "ArduinoJson" en el ESP32 para armar este paquete de datos.
+
+c)Análisis y reflexión: Se respondieron las preguntas críticas de la etapa, concluyendo que es vital incluir unidades en los nombres de los campos (ej.: _c) para evitar errores de interpretación; el formato JSon permite agregar nuevos sensores fácilmente sin romper el sistema; y el uso de estándares como IPSO facilita la interoperabilidad("plug and play") entre diferentes plataformas. 
+
+2.Publicación y comunicación MQTT (Parte 2):
+
+a)Conexión y envío: Se configuró la conexión al broker compartido para publicar los datos periódicamente en el tópico del equipo ( reto2026/eq01/data).
+
+b)Calidad de Servicio (QoS): Se seleccionó el "QoS 1" para garantizar que los datos médicos lleguen al servidor al menos una vez, evitando pérdidas de información vital.
+
+c)Análisis y reflexión: Se justificó el uso de MQTT sobre HTTP por su bajo consumo de batería y ancho de banda (ideal para wearable). Además, se analizaron los riesgos de publicar en tópicos erróneos (colisión de datos) y la importancia crítica del mecanismo LWT para alertar al dashboard si el dispositivo se apaga, pierde conexión WI_FI o sufre un impacto (posible caída del paciente).
+
+3.Documentación y entregables:
+Se recopiló toda la información técnica, el diseño del esquema y las reflexiones para ser subidos al repositorio de "Github" del equipo, cumpliendo con los entregables solicitados.
