@@ -95,3 +95,23 @@ c)Análisis y reflexión: Se justificó el uso de MQTT sobre HTTP por su bajo co
 
 ## 3.Documentación y entregables:
 Se recopiló toda la información técnica, el diseño del esquema y las reflexiones para ser subidos al repositorio de "Github" del equipo, cumpliendo con los entregables solicitados.
+
+## Etapa 3 – Integración y comunicación del sistema VitaSense
+
+Durante la tercera etapa del proyecto VitaSense se realizaron avances en la integración del hardware, la comunicación por internet y el almacenamiento de información.
+
+### Avances realizados
+
+- Integración del ESP32 con los sensores MAX30102, MLX90614 y MPU6050.
+- Visualización de las mediciones en una pantalla OLED.
+- Configuración de la comunicación mediante el protocolo MQTT.
+- Publicación de datos en formato JSON al broker MQTT.
+- Implementación de un programa en Python para recibir y almacenar mediciones en MySQL.
+- Actualización y normalización de la base de datos hasta la tercera forma normal (3FN).
+- Implementación de un sistema de detección de impactos y de generación de alertas.
+- Desarrollo de la interfaz web para la visualización de las mediciones.
+- Consideración de criterios de usabilidad y sostenibilidad.
+
+### Estado actual
+
+El prototipo cuenta con comunicación MQTT y se han realizado pruebas exitosas de almacenamiento de mediciones en la base de datos. Actualmente se trabaja en la integración final de la interfaz web y en la validación completa del sistema.
